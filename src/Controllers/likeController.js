@@ -10,25 +10,31 @@ const getLike = async (req, res) => {
 };
 
 const getLikeByUser = async (req, res) => {
-  let { userId } = req.params;
-  console.log(`id: ${userId}`);
+  let { user_id } = req.body;
+  console.log(`id: ${user_id}`);
   let data = await model.like_res.findAll({
-    where: { user_id: userId },
+    where: { user_id },
   });
-
-  // console.log(data);
-  res.send(data);
+  if (data.length == 0) {
+    res.send("User chưa like restaurant nào cả, hoặc user không tồn tại !");
+    return;
+  } else {
+    res.send(data);
+  }
 };
 
 const getLikeByRes = async (req, res) => {
-  let { resId } = req.params;
-  console.log(`id: ${resId}`);
+  let { res_id } = req.body;
+  console.log(`id: ${res_id}`);
   let data = await model.like_res.findAll({
-    where: { res_id: resId },
+    where: { res_id },
   });
-
-  // console.log(data);
-  res.send(data);
+  if (data.length == 0) {
+    res.send("Restaurant chưa được like, hoặc restaurant không tồn tại !");
+    return;
+  } else {
+    res.send(data);
+  }
 };
 
 const createLike = async (req, res) => {

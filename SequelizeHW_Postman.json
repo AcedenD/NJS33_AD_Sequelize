@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "8782de17-f4b6-4195-b308-ad6eef61bd69",
+		"name": "node33 APi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14870973"
+	},
+	"item": [
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/user/create-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tokenCybersoft",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJCb290Y2FtcCBTw6FuZyAwNyIsIkhldEhhblN0cmluZyI6IjE5LzEyLzIwNTUiLCJIZXRIYW5UaW1lIjoiMjcwMjk0NDAwMDAwMCIsIm5iZiI6MTY3OTg1MDAwMCwiZXhwIjoyNzAzMDkxNjAwfQ.66aa1E1wWfdABrMENvR5uXiMeLgyVlAY3FFSxCSEEvQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hoTen\": \"abc\",\n    \"phone\": \"09090\"\n}"
+				},
+				"url": {
+					"raw": "{{domain}}/user/get-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"get-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/food/upload",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/adendang/Downloads/Yori_Food.png"
+						},
+						{
+							"key": "hoTen",
+							"value": "abc",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abc@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/food/upload",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/like_res/get-like",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/like_res/get-like",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like_res",
+						"get-like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/like_res/get-like-by-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":14\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/like_res/get-like-by-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like_res",
+						"get-like-by-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/like_res/get-like-by-res",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"res_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/like_res/get-like-by-res",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like_res",
+						"get-like-by-res"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/like_res/create-like",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"res_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/like_res/create-like",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like_res",
+						"create-like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/like_res/delete-like",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"res_id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/like_res/delete-like",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like_res",
+						"delete-like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/rate_res/get-rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rate_res/get-rate",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate_res",
+						"get-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/rate_res/get-rate-by-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":33\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/rate_res/get-rate-by-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate_res",
+						"get-rate-by-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/rate_res/get-rate-by-res",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"res_id\":24\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/rate_res/get-rate-by-res",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate_res",
+						"get-rate-by-res"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/rate_res/create-rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"res_id\": 1,\n    \"amount\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/rate_res/create-rate",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate_res",
+						"create-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/get-order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/order/get-order",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"order",
+						"get-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/create-order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 44,\n    \"food_id\":6,\n    \"amount\":35,\n    \"arr_sub_id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/order/create-order",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"order",
+						"create-order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080/api",
+			"type": "string"
+		}
+	]
+}

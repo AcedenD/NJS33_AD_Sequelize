@@ -53,6 +53,10 @@ const createRate = async (req, res) => {
     if (data.length > 0) {
       res.send("User không được rate restaurant này lại");
     } else {
+      if (amount > 5 || amount < 1) {
+        res.send("Rate không hợp lệ, rate phải từ 1 đến 5");
+        return;
+      }
       await model.rate_res.create({
         user_id,
         res_id,
