@@ -69,7 +69,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/Users/adendang/Downloads/Yori_Food.png"
+							"src": "/Users/adendang/Downloads/running.gif"
 						},
 						{
 							"key": "hoTen",
@@ -97,7 +97,7 @@
 			"response": []
 		},
 		{
-			"name": "/like_res/get-like",
+			"name": "get all like",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -115,7 +115,7 @@
 			"response": []
 		},
 		{
-			"name": "/like_res/get-like-by-user",
+			"name": "get like by user",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -145,7 +145,7 @@
 			"response": []
 		},
 		{
-			"name": "/like_res/get-like-by-res",
+			"name": "get like by res",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -175,7 +175,7 @@
 			"response": []
 		},
 		{
-			"name": "/like_res/create-like",
+			"name": "create like",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -202,7 +202,7 @@
 			"response": []
 		},
 		{
-			"name": "/like_res/delete-like",
+			"name": "delete like",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -229,7 +229,7 @@
 			"response": []
 		},
 		{
-			"name": "/rate_res/get-rate",
+			"name": "get all rate",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -247,7 +247,7 @@
 			"response": []
 		},
 		{
-			"name": "/rate_res/get-rate-by-user",
+			"name": "get rate by user",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -277,7 +277,7 @@
 			"response": []
 		},
 		{
-			"name": "/rate_res/get-rate-by-res",
+			"name": "get rate by res",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -307,13 +307,13 @@
 			"response": []
 		},
 		{
-			"name": "/rate_res/create-rate",
+			"name": "create rate",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user_id\": 1,\n    \"res_id\": 1,\n    \"amount\": 4\n}",
+					"raw": "{\n    \"user_id\": 3,\n    \"res_id\": 1,\n    \"amount\": 55\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -334,7 +334,7 @@
 			"response": []
 		},
 		{
-			"name": "/order/get-order",
+			"name": "get order",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -352,7 +352,7 @@
 			"response": []
 		},
 		{
-			"name": "/order/create-order",
+			"name": "create order",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -373,6 +373,26 @@
 					"path": [
 						"order",
 						"create-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/food/get-food=page/1/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/food/get-food-page/1/4",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"get-food-page",
+						"1",
+						"4"
 					]
 				}
 			},
